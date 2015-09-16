@@ -23,7 +23,7 @@
 
     it ( 'should return a new ExpressRedisCache', function (done) {
       cache = cache({ prefix: prefix, host: host, port: port });
-      cache.constructor.name.should.equal('ExpressRedisCache');
+      cache.constructor.name.should.is.exactly('ExpressRedisCache');
       cache.on('error', function (error) {
         throw error;
       });
@@ -38,46 +38,39 @@
     });
 
     it ( 'should have a property prefix which is a string and equals request prefix', function () {
-      cache.should.have.property('prefix')
-        .which.is.a.String
-        .and.equal(prefix);
+      cache.should.have.property('prefix').which.is.a.String;
+      cache.prefix.should.be.exactly(prefix);
     });
 
     it ( 'should have a property host which is a string and equals request host', function () {
-      cache.should.have.property('host')
-        .which.is.a.String
-        .and.equal(host);
+      cache.should.have.property('host').which.is.a.String;
+      cache.host.should.be.exactly(host);
     });
 
     it ( 'should have a property port which is a number and equals request port', function () {
-      cache.should.have.property('port')
-        .which.is.a.Number
-        .and.equal(port);
+      cache.should.have.property('port').which.is.a.Number;        cache.port.should.be.exactly(port);
     });
 
     it ( 'should have a property FOREVER which is a number and equals -1', function () {
-      cache.should.have.property('FOREVER')
-        .which.is.a.Number
-        .and.equal(-1);
+      cache.should.have.property('FOREVER').which.is.a.Number;
+      cache.FOREVER.should.be.exactly(-1);
     });
 
     it ( 'should have a property connected which is a boolean and is true', function () {
-      cache.should.have.property('connected')
-        .which.is.a.Boolean
-        .and.is.true;
+      cache.should.have.property('connected').which.is.a.Boolean;
+      cache.connected.should.be.true;
     });
 
     it ( 'should have a property expire which is a number and equals FOREVER', function () {
-      cache.should.have.property('expire')
-        .which.is.a.Number
-        .and.equal(cache.FOREVER);
+      cache.should.have.property('expire').which.is.a.Number;
+      cache.expire.should.be.exactly(cache.FOREVER);
     });
 
     it ( 'should have a property client which is a RedisClient', function () {
       cache.should.have.property('client')
         .which.is.an.Object;
 
-      cache.client.constructor.name.should.equal('RedisClient');
+      cache.client.constructor.name.should.is.exactly('RedisClient');
     });
 
   });

@@ -41,13 +41,17 @@
     {
       "name": "pwmckenna",
       "url": "https://github.com/pwmckenna"
+    },
+    {
+      "name": "mattberther",
+      "url": "https://github.com/mattberther"
     }
   ],
   "license": "BSD",
   "dependencies": {
-    "async": "~0.9.0",
-    "colors": "^1.0.3",
-    "redis": "^0.12.1"
+    "async": "^1.4.2",
+    "colors": "^1.1.2",
+    "redis": "^1.0.0"
   },
   "directories": {
     "test": "test"
@@ -57,12 +61,12 @@
     "type": "text/html"
   },
   "devDependencies": {
-    "body-parser": "~1.12.0",
-    "method-override": "~2.3.1",
-    "request": "~2.53.0",
-    "express": "~4.11.2",
-    "mocha": "~2.1.0",
-    "should": "~5.0.0",
-    "moment": "^2.9.0"
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "method-override": "^2.3.5",
+    "mocha": "^2.3.2",
+    "moment": "^2.10.6",
+    "request": "^2.62.0",
+    "should": "^7.1.0"
   }
 }
