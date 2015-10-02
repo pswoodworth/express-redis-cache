@@ -131,7 +131,7 @@ app.get('/user',
     res.use_express_redis_cache = ! req.signedCookies.user;
 
     next();
-    }.
+  },
 
   cache.route(), // this will be skipped if user is signed in
 
